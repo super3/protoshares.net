@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Protoshares - Mining</title>
+  <title>Protoshares - Redeem MemeoryCoin(MMC) 2.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="description" content="Twitter bootstrap theme">
@@ -31,14 +31,14 @@
           <span class="sr-only">Toggle navigation</span>
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="index.html">Protoshares - Mining</a> 
+        <a class="navbar-brand" href="index.html">Protoshares - Redeem MMC</a> 
       </div>
       <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a title="Home" class="scroll brand-1" href="index.html">Home</a></li>
-          <li><a title="Download Now" href="index.html#download" class="scroll fadeto brand-4"> Download</a></li>
-          <li class="active"><a title="Mining" href="mining.html" class="scroll brand-4">Mining Guide</a></li>
-          <li><a title="Download Now" href="redeem.html" class="scroll fadeto brand-4"> Redeem MMC</a></li>
+          <li><a title="Download Now" href="#download" class="scroll fadeto brand-4"> Download</a></li>
+          <li><a title="Mining" href="mining.html" class="brand-4">Mining Guide</a></li>
+          <li class="active"><a title="Download Now" href="redeem.html" class="scroll fadeto brand-4"> Redeem MMC</a></li>
           <li><a title="forum" href="https://bitsharestalk.org/" class="scroll brand-4">Forum</a></li>
         </ul>
       </div>
@@ -48,7 +48,7 @@
   <!-- Home Page -->
   <div id="home" class="page color-1">
     <div class="inner-page">
-      <h2 class="page-headline large">Mining Guide</h2>
+      <h2 class="page-headline large">Redeem MemeoryCoin(MMC) 2.0</h2>
     </div>
     <div class="row inner-page">
 
@@ -59,7 +59,7 @@
   <div class="sign-up color-2 visible-lg">
     <div class="row inner-page">
       <div class="col-md-12">
-        <h4 class="pull-left">Start mining in <b>the cloud</b> today.</h4>
+        <h4 class="pull-left">How to claim <b>your stake</b> in this DAC.</h4>
         <a href="#dac" class="scroll btn btn-primary pull-right" title="Check out more freatures!"><i class="fa fa-caret-down"></i> Learn more</a>
       </div>
     </div>
@@ -67,111 +67,42 @@
 
   <!-- Feature page-->
   <div id="dac" class="page color-4">
-    <div class="inner-page">
-      <h2 class="page-headline">Cloud Mining (with <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a>)</h2>
-    </div>
+    
 
     <div class="inner-page row">
       <p>
 
         <h3> Introduction</h3>
 
-        Over the last few months there has been a lot of talk about Protoshares. Protoshares is a 
-        CPU-mined coin, which uses a new Proof-Of-Work (POW) algorithm called <a href="http://invictus-innovations.com/s/MomentumProofOfWork.pdf">Momentum</a>
-        , designed to resist GPU and ASIC implementation. This is to keep mining power in 
-        the hands of small miners, securing the network against majority attacks. It’s currently traded 
-        on exchanges as <a href="https://bter.com/">bter</a>, <a href="https://www.cryptsy.com/">cryptsy</a> and <a href="http://www.btc38.com/">btc38</a>.
-        <br/><br/>
-        Not just a coin itself, the coin is used as a start-off point for new coins that are developed by 
-
-        <a href="http://invictus-innovations.com/">Invictus Innovations</a>, for example the new <a href="https://bitcointalk.org/index.php?topic=370806.0">Memory Coin 2.0</a> (MMS). 
-        If you own PTS, then your stake gets mapped on the launch of the new coin. As it’s a CPU coin, you can mine them 
-        on powerful servers. This guide tells you how to do this on <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a> cloud servers.
-
-        <h3> Step #1: Sign Up for <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a> </h3>
-
-        A: Use one of the following codes to start off with <b>$10 free!</b>
-        <br/><br/>
-          thechangelog10, divein10, holidayssd
-        <br/><br/>
-        B: Enter credit card details or <b>charge the account $10 dollars</b> using PayPal.
-        <br/><br/>
-        C: Fire up a 2 CPU/2GB droplet, choose a location, and pick the latest Ubuntu Linux.
+       ProtoShares owners collectively received a 1% stake in the relaunched <a href="https://bitcointalk.org/index.php?topic=370806.0">MemoryCoin - MemoryCoin 2.0</a>. 
+       This guide will help you to claim your MMC coins if you had Protoshares (PTS) on an address <b>you controlled on block 32,000</b>. 
+       <br/><br/>
+       <b>You will get 1.0 MMC for every 10 PTS.</b> If your balance was held at an exchange, contact the exchange for details.
 
  
 
          <ul class="clients list-inline" style="text-align:center; padding-top: 20px;">
-        <li><a href="https://www.digitalocean.com/?refcode=b42d05f9603c" style="color:white;"> Sign Up!</a></li>
+        <li><a href="https://bitcointalk.org/index.php?topic=370806.0" style="color:white;"> MemoryCoin 2.0</a></li>
+           <li><a href="https://bitcointalk.org/index.php?topic=372233.0" style="color:white;"> Mining Guide</a></li>
         </ul>
 
         
-        <h3> Step #2: Setup a PTS wallet</h3>
+        <h3> Step #1:  Dump the Private Key</h3>
 
-      Download the Protoshares-QT wallet if you did not do this already. 
-      Install, let it sync, and secure the wallet with a good password.
+        Start up your Protoshares-Qt client and copy the address on the receive page that held your funds. Go to help, debug window, console, and type:
+        <pre>
+walletpassphrase &lt;your wallet password&gt; 600
+dumpprivkey &lt;your address&gt;</pre>
+       
+        <img src="img/priv1.png" alt="guide"/>
+        Then copy the private key.
 
-        <ul class="clients list-inline" style="text-align:center; padding-top: 20px;">
-        <li><a href="bin/protoshares-0.2.0.zip" style="color:white;"> Windows</a></li>
-        <li><a href="bin/ProtoShares-0.2.0.dmg" style="color:white;"> Mac</a></li>
-        <li><a href="https://github.com/InvictusInnovations/ProtoShares.git" style="color:white;"> Code</a></li>
-        </ul>
+        <h3> Step #2: Import the Private Key</h3>
+        To redeem the MMC coin, start up the <a href="https://bitcointalk.org/index.php?topic=370806.0"> MemoryCoin-Qt client.</a>. 
+        Go to the console like in the the Protoshares client: help - debug window - console. Now type this to import your private key: 
+        <pre>importprivkey &lt;the copied private key&gt;</pre>
+        You should now receive your MMC coins. It is recommend that you transfer your balance to a fresh MemoryCoin wallet after import. If you have multiple addresses repeat the process with the other addresses after the coins have been successfully send to the fresh MMC address.
 
-  <h3> Step #3:  Setup the Server</h3>
-     
-    You now receive an email with an IP address and a password. Install <a href="www.putty.org">Putty</a> or use 
-    SSH and connect with your brand new virtual server. Accept the SSH key if Putty asks.
-    <br/><br/>
-    Login with the user “root” and the provided password in your email.
-    <br/><br/>
-    Now copy or type over the following commands:<br/>
-
-    <pre>
-    apt-get update && apt-get install yasm -y git make g++ build-essential libminiupnpc-dev
-    sudo apt-get install -y libboost-all-dev libdb++-dev libgmp-dev libssl-dev dos2unix</pre>
-    That set up the tools needed. Next up, compile the miner:
-
-    <pre>
-    cd ~ && git clone https://github.com/thbaumbach/ptsminer && cd ~/ptsminer/src && make -f 
-    makefile.unix && cd ~</pre>
-
-    Now let’s fire up the miner! 
-
-    <pre>
-    screen –S ptc
-    cd ~/ptsminer/src && ./ptsminer <enter here your PTS address from the wallet> <enter here your number of CPUs></pre>
-
-    When you reconnect to the server type:
-
-    <pre>
-    screen –d
-    screen –r</pre>
-
-    and you will see your miner process running.
-      </p>
-
-
-
- <h3> Step #4:  Copy your Droplet</h3>
-Digital Ocean supports cloning of droplets with snapshots.
-<br/><br/>
-
-A. Shut down the droplet you want to clone.<br/>
-B. Select the droplet in the digital ocean management panel. <br/>
-C. Click on snapshots. <br/>
-D. Enter a name and click on snapshot!<br/>
-E. If you fire up a new droplet, pick the same location, go to images and select your snapshot.<br/>
-F. Don’t forget to fire up the miners with the command above!<br/>
-
-
-<h3> How to Find out Your Earnings </h3>
-
-The mining pool will automatically pay out at <b>0.2 PTS</b>. This will appear in your wallet.<br/>
-You can mine with multiple machines on one address. <br/><br/>
-
-See your earnings online here:
-
-<pre>http://ptsweb.beeeeer.org/user/<your PTS address></pre>
-Happy mining!
 
 
      
@@ -231,7 +162,7 @@ Happy mining!
     <div class="inner-page row">
       <div class="col-md-6 social">
         <!--<a href="#contact"><i class="fa fa-twitter"></i></a>-->
-        <a href="https://github.com/super3/protoshares.net"><i class="fa fa-github-square"></i></a> 
+        <a href="https://github.com/super3/protoshares.net"> <i class="fa fa-github-square"></i></a> 
         <!--<a href="#contact"><i class="fa fa-facebook-square"></i></a>-->
         <!--<a href="#contact"><i class="fa fa-google-plus-square"></i></a>-->
       </div>
