@@ -26,9 +26,22 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-40768937-4', 'protoshares.com');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
-
   </script>   
+
+    <script type="text/javascript">
+  function trackOutboundLink(link, category, action) { 
+
+  try { 
+  _gaq.push(['_trackEvent', category , action]); 
+  } catch(err){}
+
+  setTimeout(function() {
+  document.location.href = link.href;
+  }, 100);
+  }
+  </script>
 </head>
 
 

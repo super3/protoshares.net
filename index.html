@@ -26,9 +26,22 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-40768937-4', 'protoshares.com');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
-
   </script>   
+
+    <script type="text/javascript">
+  function trackOutboundLink(link, category, action) { 
+
+  try { 
+  _gaq.push(['_trackEvent', category , action]); 
+  } catch(err){}
+
+  setTimeout(function() {
+  document.location.href = link.href;
+  }, 100);
+  }
+  </script> 
 </head>
 
 
@@ -50,7 +63,7 @@
           <li><a title="Download Now" href="#download" class="scroll fadeto brand-4"> Download</a></li>
           <li><a title="Mining" href="mining.html" class="brand-4">Mining Guide</a></li>
           <li><a title="Download Now" href="redeem.html" class="scroll fadeto brand-4"> Redeem MMC</a></li>
-          <li><a title="forum" href="https://bitsharestalk.org/" class="scroll brand-1">Forum</a></li>
+          <li><a title="forum" href="https://bitsharestalk.org/" onClick="trackOutboundLink(this, 'BitsharesTalk', 'bitsharestalk.org'); return false;" class="scroll brand-1">Forum</a></li>
            <li><a title="forum" href="resources.html" class="scroll brand-1">Resources</a></li>
         </ul>
       </div>
@@ -124,7 +137,7 @@
         <li>
           <h3><i class="fa fa-flash"></i> Backing</h3>
           <p>
-          With radical transparency, <a href="https://github.com/InvictusInnovations/ProtoShares">open source development</a>, ready finance, collaborators and a team to make it all happen. 
+          With radical transparency, <a href="https://github.com/InvictusInnovations/ProtoShares" onClick="trackOutboundLink(this, 'Github', 'github.com'); return false;">open source development</a>, ready finance, collaborators and a team to make it all happen. 
           </p>
         </li>
         <li>
@@ -134,20 +147,20 @@
         <li>
           <h3><i class="fa fa-cog"></i> Fair Mining</h3>
           <p>
-            We belive the playing field should be level. We developed a whole new algorithm called <a href="http://static.squarespace.com/static/51fb043ee4b0608e46483caf/t/5261691de4b079be91734445/1382115613469/MomentumProofOfWork.pdf">MOMENTUM</a> to accompish this.
+            We belive the playing field should be level. We developed a whole new algorithm called <a href="http://static.squarespace.com/static/51fb043ee4b0608e46483caf/t/5261691de4b079be91734445/1382115613469/MomentumProofOfWork.pdf" onClick="trackOutboundLink(this, 'Momentum Whitepaper', 'squarespace.com'); return false;">MOMENTUM</a> to accompish this.
           </p>
         </li>
         <li>
           <h3><i class="fa fa-user"></i> Full-time Devs</h3>
           <p>
-               Anyone can develop a DAC, but base development is done by <a href="http://invictus-innovations.com/">Invictus Innovation</a>,
+               Anyone can develop a DAC, but base development is done by <a href="http://invictus-innovations.com/" onClick="trackOutboundLink(this, 'Invictus', 'invictus-innovations.com'); return false;">Invictus Innovation</a>,
               a software company with over $1M in funding and capital.
           </p>
         </li>
         <li>
           <h3><i class="fa fa-paperclip"></i> Research Driven</h3>
           <p>
-              No copy, paste, release here. We already have developed <a href="http://static.squarespace.com/static/51fb043ee4b0608e46483caf/t/5261691de4b079be91734445/1382115613469/MomentumProofOfWork.pdf">a new mining algorithm</a>,
+              No copy, paste, release here. We already have developed <a href="http://static.squarespace.com/static/51fb043ee4b0608e46483caf/t/5261691de4b079be91734445/1382115613469/MomentumProofOfWork.pdf" onClick="trackOutboundLink(this, 'Momentum Whitepaper', 'squarespace.com'); return false;">a new mining algorithm</a>,
               and are working on <a href="https://static.squarespace.com/static/51fb043ee4b0608e46483caf/t/52a1214de4b055489470ed4b/1386291533371/TransactionsAsProofOfStake10.pdf">a new proof of stake system</a>.
           </p>
         </li>
@@ -166,12 +179,12 @@
     <div class="col-md-6">
         <h3>Resources.</h3>
         <ul class="list-wide">
-          <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php">BitSharesTalk Forum</a> </li>
-          <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=5.0">What is Protoshares?</a> </li>
-         <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=531.0">The Intrinsic Value of Protoshares </a> </li>
-           <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=994.0">DAC Angels - Protoshares Stakeholders Group</a> </li>
-            <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/">Invictus Innovations</a> </li>
-              <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/protoshares">Invictus Innovations - Protoshares</a> </li>
+          <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php" onClick="trackOutboundLink(this, 'BitsharesTalk', 'bitsharestalk.org'); return false;" >BitSharesTalk Forum</a> </li>
+          <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=5.0" onClick="trackOutboundLink(this, 'BitsharesTalk', 'bitsharestalk.org'); return false;" >What is Protoshares?</a> </li>
+         <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=531.0" onClick="trackOutboundLink(this, 'BitsharesTalk', 'bitsharestalk.org'); return false;" >The Intrinsic Value of Protoshares </a> </li>
+           <li><i class="fa fa-check"></i> <a href="https://bitsharestalk.org/index.php?topic=994.0" onClick="trackOutboundLink(this, 'BitsharesTalk', 'bitsharestalk.org'); return false;" >DAC Angels - Protoshares Stakeholders Group</a> </li>
+            <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/" onClick="trackOutboundLink(this, 'Invictus', 'invictus-innovations.com'); return false;">Invictus Innovations</a> </li>
+              <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/protoshares" onClick="trackOutboundLink(this, 'Invictus', 'invictus-innovations.com'); return false;">Invictus Innovations - Protoshares</a> </li>
         </ul>
       </div>
       <div class="col-md-6">
@@ -179,7 +192,7 @@
         <p class="lead">Protoshares are the first opportunity to acquire a new type of asset as every Protoshare is a share in every new DAC that is created. These include:</p>
         <ul class="list-wide">
           <li><i class="fa fa-check"></i> <a href="redeem.html">Memorycoin 2.0</a> - Block 32000 </li>
-          <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/bitshares2">BitShares</a> - Coming Soon </li>
+          <li><i class="fa fa-check"></i> <a href="http://invictus-innovations.com/bitshares2" onClick="trackOutboundLink(this, 'Invictus', 'invictus-innovations.com'); return false;">BitShares</a> - Coming Soon </li>
           <li><i class="fa fa-check"></i> And Many More!</li>
         </ul>
       </div>
@@ -211,8 +224,8 @@
       </div>
       <div class="inner-page row">
         <ul class="clients list-inline">
-          <li><a href="bin/protoshares-0.2.0.zip" style="color:white;"> Windows</a></li>
-          <li><a href="bin/ProtoShares-0.2.0.dmg" style="color:white;"> Mac</a></li>
+          <li><a href="bin/protoshares-0.2.0.zip" style="color:white;" onClick="trackOutboundLink(this, 'Windows Download', 'protoshares.com'); return false;"> Windows</a></li>
+          <li><a href="bin/ProtoShares-0.2.0.dmg" style="color:white;" onClick="trackOutboundLink(this, 'Mac Download', 'protoshares.com'); return false;"> Mac</a></li>
           <li><a href="https://github.com/InvictusInnovations/ProtoShares.git" style="color:white;"> Code</a></li>
 
         </ul> 
@@ -232,7 +245,7 @@
         <!--<a href="#contact"><i class="fa fa-google-plus-square"></i></a>-->
       </div>
       <div class="col-md-6 text-right copyright">
-        &copy; 2013 <a href="http://invictus-innovations.com/" title="twitter bootstrap themes">Invictus-Innovations</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="fa fa-caret-up"></i></a>
+        &copy; 2013 <a href="http://invictus-innovations.com/" title="twitter bootstrap themes" onClick="trackOutboundLink(this, 'Invictus', 'invictus-innovations.com'); return false;">Invictus-Innovations</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="fa fa-caret-up"></i></a>
       </div>
     </div>
   </footer>

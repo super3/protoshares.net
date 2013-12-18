@@ -26,9 +26,22 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-40768937-4', 'protoshares.com');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
+  </script>   
 
-  </script>     
+    <script type="text/javascript">
+  function trackOutboundLink(link, category, action) { 
+
+  try { 
+  _gaq.push(['_trackEvent', category , action]); 
+  } catch(err){}
+
+  setTimeout(function() {
+  document.location.href = link.href;
+  }, 100);
+  }
+  </script>   
 </head>
 
 
@@ -80,7 +93,7 @@
   <!-- Feature page-->
   <div id="dac" class="page color-4">
     <div class="inner-page">
-      <h2 class="page-headline">Cloud Mining (with <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a>)</h2>
+      <h2 class="page-headline">Cloud Mining (with <a href="https://www.digitalocean.com/?refcode=b42d05f9603c" onClick="trackOutboundLink(this, 'Digital Ocean Referal', 'digitalocean.com'); return false;">Digital Ocean</a>)</h2>
     </div>
 
     <div class="inner-page row">
@@ -100,7 +113,7 @@
         If you own PTS, then your stake gets mapped on the launch of the new coin. As it’s a CPU coin, you can mine them 
         on powerful servers. This guide tells you how to do this on <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a> cloud servers.
 
-        <h3> Step #1: Sign Up for <a href="https://www.digitalocean.com/?refcode=b42d05f9603c">Digital Ocean</a> </h3>
+        <h3> Step #1: Sign Up for <a href="https://www.digitalocean.com/?refcode=b42d05f9603c" onClick="trackOutboundLink(this, 'Digital Ocean Referal', 'digitalocean.com'); return false;">Digital Ocean</a> </h3>
 
         A: Use one of the following codes to start off with <b>$10 free!</b>
         <br/><br/>
@@ -113,7 +126,7 @@
  
 
          <ul class="clients list-inline" style="text-align:center; padding-top: 20px;">
-        <li><a href="https://www.digitalocean.com/?refcode=b42d05f9603c" style="color:white;"> Sign Up!</a></li>
+        <li><a href="https://www.digitalocean.com/?refcode=b42d05f9603c" onClick="trackOutboundLink(this, 'Digital Ocean Referal', 'digitalocean.com'); return false;" style="color:white;"> Sign Up!</a></li>
         </ul>
 
         
@@ -123,8 +136,8 @@
       Install, let it sync, and secure the wallet with a good password.
 
         <ul class="clients list-inline" style="text-align:center; padding-top: 20px;">
-        <li><a href="bin/protoshares-0.2.0.zip" style="color:white;"> Windows</a></li>
-        <li><a href="bin/ProtoShares-0.2.0.dmg" style="color:white;"> Mac</a></li>
+        <li><a href="bin/protoshares-0.2.0.zip" onClick="trackOutboundLink(this, 'Windows Download', 'protoshares.com'); return false;" style="color:white;"> Windows</a></li>
+        <li><a href="bin/ProtoShares-0.2.0.dmg" onClick="trackOutboundLink(this, 'Mac Download', 'protoshares.com'); return false;" style="color:white;"> Mac</a></li>
         <li><a href="https://github.com/InvictusInnovations/ProtoShares.git" style="color:white;"> Code</a></li>
         </ul>
 
@@ -227,8 +240,8 @@ Happy mining!
       </div>
       <div class="inner-page row">
         <ul class="clients list-inline">
-          <li><a href="bin/protoshares-0.2.0.zip" style="color:white;"> Windows</a></li>
-          <li><a href="bin/ProtoShares-0.2.0.dmg" style="color:white;"> Mac</a></li>
+          <li><a href="bin/protoshares-0.2.0.zip" onClick="trackOutboundLink(this, 'Windows Download', 'protoshares.com'); return false;"style="color:white;"> Windows</a></li>
+          <li><a href="bin/ProtoShares-0.2.0.dmg" onClick="trackOutboundLink(this, 'Mac Download', 'protoshares.com'); return false;"style="color:white;"> Mac</a></li>
           <li><a href="https://github.com/InvictusInnovations/ProtoShares.git" style="color:white;"> Code</a></li>
 
         </ul> 
